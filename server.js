@@ -37,5 +37,5 @@ app.listen(PORT, () => {
 
 
 app.use('/',(req,res)=>{
-    res.send(" welcome to jwiggy");
+    res.send("welcome to jwiggy");
 })
