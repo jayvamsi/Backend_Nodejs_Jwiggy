@@ -32,7 +32,8 @@ const firmSchema=new mongoose.Schema({
     },
     image:
     {
-        type:String
+        type: String,
+        required:true
     },
     vendor:
     [
@@ -50,6 +51,6 @@ const firmSchema=new mongoose.Schema({
     ]
 })
 
-const Firm=mongoose.model('Firm',firmSchema);
+const Firm = mongoose.models.Firm || mongoose.model('Firm',firmSchema);
 
 module.exports=Firm

@@ -4,11 +4,9 @@ const Firm=require("../models/Firm");
 const path=require('path');
 
 const storage = multer.diskStorage({
-    destination: function(req,file,cb){
-        cb(null,'uploads/');
-    },
-    filename: function(req, file, cb){
-      cb(null, Date.now() + path.extname( file.originalname));
+    destination:"uploads",
+    filename: (req, file, cb)=>{
+      cb(null,`${Date.now()}${file.originalname}`);
     }
   });
 
